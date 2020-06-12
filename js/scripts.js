@@ -7,7 +7,18 @@ $(document).ready(function() {
       return parseInt(element);
     });
     
-    $("#output").text(numberArray);
+    
+    for (const digit of numberArray) {
+      if(!Number.isInteger(digit)){
+        $("#output").text("Enter an integer");
+        break;
+      }
+    }
+        
+
+
+
+    //$("#output").text(numberArray);
     
    // if(!Number.isInteger(userNumber)){
      // $("#output").text("Please enter a numeral");
