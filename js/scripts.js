@@ -3,16 +3,11 @@ $("form#form1").submit(function(event){
   event.preventDefault();
   const userNumber = parseInt($("#input").val());
   
-  const output = integerIdentifier(userNumber);
-
-  $("#output").text(output);
-  });
+   if(!Number.isInteger(userNumber)){
+    $("#output").text("Please enter a numeral");
+   }else {
+    $("#output").text("This is a number");
+   } 
+});
 });
 
-function integerIdentifier(userNumber){
-  if(Number.isInteger(userNumber)){
-    return "true";
-  } else {
-    return "false";
-  }
-}
