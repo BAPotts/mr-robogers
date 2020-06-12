@@ -18,7 +18,7 @@ $(document).ready(function() {
 
      if (isInt){   
       let rangeArray = makeRangeArray(inputNum);
-      let outputArray = replaceOneDigit(stringArray);
+      let outputArray = replaceOneDigit(rangeArray);
       $("#output").text(outputArray);
      } 
   });
@@ -29,6 +29,7 @@ function makeRangeArray(inputNum){
   let rangeArray = [];
   for (let i = 0; i <= inputNum; i++){
     rangeArray[i] = i;
+    rangeArray[i].toString();
   }
   return rangeArray;
 }
