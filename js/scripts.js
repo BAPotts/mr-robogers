@@ -17,21 +17,14 @@ $(document).ready(function() {
     }
 
      if (isInt){   
-      let rangeOutputArray = makeRangeArray(inputNum);
-      $("#output").text(rangeOutputArray);
-     }
-
-    //$("#output").text(numberArray);
-    
-   // if(!Number.isInteger(userNumber)){
-     // $("#output").text("Please enter a numeral");
-   // }else {
-      //$("#output").text("This is a number");
-   // } 
+      let rangeArray = makeRangeArray(inputNum);
+      let outputArray = replaceOneDigit(stringArray);
+      $("#output").text(outputArray);
+     } 
   });
 });
 
-function  makeRangeArray(inputNum){
+function makeRangeArray(inputNum){
   
   let rangeArray = [];
   for (let i = 0; i <= inputNum; i++){
@@ -39,3 +32,16 @@ function  makeRangeArray(inputNum){
   }
   return rangeArray;
 }
+
+function replaceOneDigit(stringArray){
+
+  for (let i = 0; i<stringArray.length; i++){
+     for (let j = 0; j<stringArray[i].length; j++){
+      if (stringArray[i].charAt(j)=== "1"){
+        stringArray[i] = "Beep!";
+      }
+    }
+  }
+  return stringArray;
+}
+
