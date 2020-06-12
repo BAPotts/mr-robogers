@@ -2,21 +2,24 @@ $(document).ready(function() {
   $("form#form1").submit(function(event){
     event.preventDefault();
     const inputString = $("#input").val();
+    const inputNum = parseInt(inputString);
     const stringArray = inputString.split("");
-    const numberArray = stringArray.map(function(element) {
+    const userArray = stringArray.map(function(element) {
       return parseInt(element);
     });
     
     
-    for (const digit of numberArray) {
+    for (const digit of userArray) {
       if(!Number.isInteger(digit)){
         $("#output").text("Enter an integer");
         break;
+      }else {let rangeOutputArray = makeRangeArray(inputNum);
       }
     }
         
+    
 
-
+    $("#output").text(rangeOutputArray);
 
     //$("#output").text(numberArray);
     
@@ -28,3 +31,11 @@ $(document).ready(function() {
   });
 });
 
+function  makeRangeArray(inputNum){
+  
+  let rangeArray = [];
+  for (let i = 0; i <= inputNum; i++){
+    rangeArray[i] = i;
+  }
+  return rangeArray;
+}
