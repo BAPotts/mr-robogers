@@ -8,16 +8,18 @@ $(document).ready(function() {
       return parseInt(element);
     });
     
-    
-    for (const digit of userArray) {
-      if(!Number.isInteger(digit)){
-        $("#output").text("Enter an integer");
-        break;
-      }else {let rangeOutputArray = makeRangeArray(inputNum);
+    let intFlag = false;
+     do{
+      for (const digit of userArray) {
+        if(!Number.isInteger(digit)){
+          $("#output").text("Enter an integer");
+        }else { intFlag = true;
+        }
       }
     }
-        
+    while (!intFlag)
     
+let rangeOutputArray = makeRangeArray(inputNum);
 
     $("#output").text(rangeOutputArray);
 
@@ -28,8 +30,9 @@ $(document).ready(function() {
    // }else {
       //$("#output").text("This is a number");
    // } 
+   
   });
-});
+});  
 
 function  makeRangeArray(inputNum){
   
