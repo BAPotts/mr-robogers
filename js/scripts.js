@@ -37,14 +37,14 @@ function makeRangeArray(inputNum){
 }
 
 function replaceOneDigit(stringArray){
-
   for (let i = 0; i<stringArray.length; i++){
-     for (let j = 0; j<stringArray[i].length; j++){
-      if (stringArray[i].charAt(j)=== "1"){
-        stringArray[i] = "Beep!";
-      }
+    if (stringArray[i].includes("3")){
+      stringArray[i] = "Won't you be my neighbor?";
+    }else if (stringArray[i].includes("2")){
+      stringArray[i] = "Boop!";
+    }else if (stringArray[i].includes("1")){
+      stringArray[i] = "Beep!";
     }
   }
   return stringArray;
 }
-
