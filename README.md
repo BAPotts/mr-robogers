@@ -9,14 +9,17 @@
 ## Languages & Technologies Used:
  
   ### Programming Languages & Libraries
-  * [Unordered List]
+  * HTML
+  * JavaScript
+  * JQuery
+  * Bootstrap
  
   ### Operating Systems & Programs
-  * [Unordered List]
+  * VS Code
  
 ## Installation
  
-  1. Open a web browser, such as Google Chrome, and navigate to https://github.com/BAPotts/[repository].
+  1. Open a web browser, such as Google Chrome, and navigate to https://github.com/BAPotts/mr-robogers .
   3. Click the green "Clone or download" button at the right of the screen.
   4. Select "Download ZIP."
   5. Use a file extractor or unzip program (such as PeaZip, Unzipper, WinZip, Zipware, or 7-ZIP) to extract the ZIP files onto your computer.
