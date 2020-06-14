@@ -50,7 +50,7 @@
   * No known bugs at this time. 
 ### Contributors
  
-  * [Contributor(s): Anyone who contributed at least %5 of the total product.]
+  * Beverly Potts
  
 ### License
  

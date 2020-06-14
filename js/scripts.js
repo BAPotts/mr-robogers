@@ -2,7 +2,7 @@ $(document).ready(function() {
   $("form#form1").submit(function(event){
     event.preventDefault();
     const inputString = $("#input").val();
-    const inputNum = parseInt(inputString);
+    const inputNumber = parseInt(inputString);
     const stringArray = inputString.split("");
     const userArray = stringArray.map(function(element) {
       return parseInt(element);
@@ -16,18 +16,18 @@ $(document).ready(function() {
       }
     }
 
-     if (isInt){   
-      let stringRangeArray = makeRangeArray(inputNum);
-      let outputArray = replaceOneDigit(stringRangeArray);
+    if (isInt){   
+      let stringRangeArray = makeRangeArray(inputNumber);
+      let outputArray = makeRobotArray(stringRangeArray);
       $("#output").text(outputArray);
-     } 
+    } 
   });
 });
 
-function makeRangeArray(inputNum){
+function makeRangeArray(inputNumber){
   
   let rangeArray = [];
-  for (let i = 0; i <= inputNum; i++){
+  for (let i = 0; i <= inputNumber; i++){
     rangeArray[i] = i;
   }
   let stringRangeArray = rangeArray.map(function(element){
@@ -36,7 +36,7 @@ function makeRangeArray(inputNum){
   return stringRangeArray;
 }
 
-function replaceOneDigit(stringArray){
+function makeRobotArray(stringArray){
   for (let i = 0; i<stringArray.length; i++){
     if (stringArray[i].includes("3")){
       stringArray[i] = "Won't you be my neighbor?";
