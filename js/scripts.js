@@ -18,8 +18,8 @@ $(document).ready(function() {
 
     if (isInt){   
       let stringRangeArray = makeRangeArray(inputNumber);
-      let outputArray = makeRobotArray(stringRangeArray);
-      $("#output").text(outputArray);
+      let robotArray = makeRobotArray(stringRangeArray);
+      $("#output").text(robotArray);
     } 
   });
 });
