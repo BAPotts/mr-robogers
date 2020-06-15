@@ -5,9 +5,9 @@ $(document).ready(function() {
     const inputNumber = parseInt(inputString);
     const stringArray = inputString.split("");
     const userArray = stringArray.map(function(element) {
-      return parseInt(element);
+      return parseInt(element); //is this okay here or is this considered business logic?
     });
-    
+    //shaky on where some logic belongs. should the below validation go in its own function?
     let isInt = true;
     for (const digit of userArray) {
       if(!Number.isInteger(digit)){
